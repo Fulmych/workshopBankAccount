@@ -4,17 +4,23 @@ public class customer {
     private String firstName;
     private String lastname;
     private String email;
-    private int identifier =0;
+    private int identifier = 0;
+    private static int uid = 0;
 
-    private  int uid = 0;
-
+ /*   public customer(String firstName, String lastname, String email) {
+        this.identifier = ++uid;
+        this.firstName = firstName;
+        this.lastname = lastname;
+        this.email = email;
+    }
+*/
     public String getFirstName() {
         return firstName;
     }
 
     public void setFirstName(String firstName) {
+        this.identifier = uid++;
         this.firstName = firstName;
-        this.identifier=uid++;
     }
 
     public String getLastname() {
@@ -33,7 +39,7 @@ public class customer {
         this.email = email;
     }
 
-    public int getIdentifier(int i) {
+    public int getIdentifier() {
         return identifier;
     }
 

@@ -5,6 +5,12 @@ public class bankAccount {
     private int balance;
     private customer a;
 
+ /*   public bankAccount(String id, int balance, customer a) {
+        this.id = id;
+        this.balance = balance;
+        this.a = a;
+    }
+*/
     public String getId() {
         return id;
     }

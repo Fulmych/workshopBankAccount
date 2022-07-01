@@ -31,7 +31,7 @@ class customerTest {
     @Test
     void getIdentifier() {
         a.setIdentifier(1);
-        int getIdentifier = a.getIdentifier(1);
+        int getIdentifier = a.getIdentifier();
         Assertions.assertEquals(1,1);
     }
 }

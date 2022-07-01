@@ -24,4 +24,15 @@ class customerDAOTest {
         b.setLastname("Långhus");
         Assertions.assertEquals("Bamse Lånhus", "Bamse Lånhus");
     }
+
+    @Test
+    void addCustomerToArray() {
+        bankAccountDAO bA = new bankAccountDAO();
+        customer b = new customer();
+        bankAccount c = new bankAccount();
+        b.setFirstName("Bamse");
+        b.setLastname("Långhus");
+        bA.addAccount(c, "164645", 2, b);
+        Assertions.assertTrue(true);
+    }
 }

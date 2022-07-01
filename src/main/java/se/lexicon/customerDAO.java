@@ -13,11 +13,18 @@ public class customerDAO {
                 return false;
             }
         }
-        customers.add(a);
         a.setFirstName(firstName);
         a.setLastname(lastName);
         a.setEmail(email);
         return true;
+    }
+    public boolean addCustomerToArray(customer a, bankAccountDAO bA){
+        String c = bA.findAccount(a.getFirstName(), a.getLastname());
+        if (!c.equals("")) {
+            customers.add(a);
+            return true;
+        }
+        return false;
     }
 
     public String findCustomer(String firstName, String lastName){
