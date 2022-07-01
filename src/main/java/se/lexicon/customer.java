@@ -4,7 +4,9 @@ public class customer {
     private String firstName;
     private String lastname;
     private String email;
-    private int identifier;
+    private int identifier =0;
+
+    private  int uid = 0;
 
     public String getFirstName() {
         return firstName;
@@ -12,6 +14,7 @@ public class customer {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+        this.identifier=uid++;
     }
 
     public String getLastname() {
@@ -30,7 +33,7 @@ public class customer {
         this.email = email;
     }
 
-    public int getIdentifier() {
+    public int getIdentifier(int i) {
         return identifier;
     }
 
